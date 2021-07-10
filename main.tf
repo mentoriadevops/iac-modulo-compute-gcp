@@ -7,14 +7,12 @@ resource "google_compute_instance" "default" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = var.instance_image
     }
   }
 
   network_interface {
     network    = var.network
     subnetwork = var.subnetwork
-
   }
-
 }
