@@ -12,7 +12,9 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network    = var.network
-    subnetwork = var.subnetwork
+    network            = var.network
+    subnetwork         = var.subnetwork
+    subnetwork_project = var.project
+
   }
 }
