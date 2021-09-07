@@ -39,3 +39,9 @@ variable "labels" {
   description = "Lista de labels para nossa instância maneira"
   type        = map(string)
 }
+
+variable "metadata_startup_script" {
+  description = "Script executado na inicialização do Sistema Operacional"
+  type        = string
+  default     = ""
+}
