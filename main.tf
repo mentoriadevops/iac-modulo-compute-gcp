@@ -5,6 +5,8 @@ resource "google_compute_instance" "default" {
   zone         = var.zone
   labels       = var.labels
 
+  metadata_startup_script = var.metadata_startup_script
+
   boot_disk {
     initialize_params {
       image = var.instance_image
@@ -15,6 +17,5 @@ resource "google_compute_instance" "default" {
     network            = var.network
     subnetwork         = var.subnetwork
     subnetwork_project = var.project
-
   }
 }
