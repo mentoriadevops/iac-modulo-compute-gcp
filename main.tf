@@ -4,6 +4,7 @@ resource "google_compute_instance" "default" {
   machine_type = var.machine_type
   zone         = var.zone
   labels       = var.labels
+  tags         = var.tags
 
   metadata_startup_script = var.metadata_startup_script
 
