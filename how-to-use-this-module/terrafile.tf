@@ -4,7 +4,7 @@ module "compute_gcp" {
   instance_name  = "nomedainstancia"
   instance_image = "debian-cloud/debian-10"
   machine_type   = "e2-small"
-  zone           = "us-east1-d"
+  zone           = "us-central1-a"
   network        = "default"
 
   metadata_startup_script = "echo 'Hello Mentoria' > /tmp/hello.txt"
@@ -12,4 +12,6 @@ module "compute_gcp" {
   labels = {
     value = "key"
   }
+
+  tags = ["mentoriaiac"]
 }

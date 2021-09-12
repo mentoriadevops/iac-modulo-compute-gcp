@@ -36,8 +36,13 @@ variable "subnetwork" {
 }
 
 variable "labels" {
-  description = "Lista de labels para nossa instância maneira"
+  description = "Mapa de labels para nossa instância maneira"
   type        = map(string)
+}
+
+variable "tags" {
+  description = "Lista de tags de rede associadas à instância"
+  type        = list(string)
 }
 
 variable "metadata_startup_script" {
