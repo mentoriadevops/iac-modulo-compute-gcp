@@ -30,3 +30,9 @@ override.tf.json
 tfplan
 
 **/credentials
+
+# Ignore the following files about keys to connect to GCP
+key.json
+keys.json
+cred.json
+creds.json

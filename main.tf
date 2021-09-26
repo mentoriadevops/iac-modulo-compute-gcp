@@ -8,6 +8,10 @@ resource "google_compute_instance" "default" {
 
   metadata_startup_script = var.metadata_startup_script
 
+  metadata = {
+    ssh-keys = var.ssh_keys
+  }
+
   boot_disk {
     initialize_params {
       image = var.instance_image
