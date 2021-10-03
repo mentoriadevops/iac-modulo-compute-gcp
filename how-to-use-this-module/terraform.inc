@@ -68,6 +68,10 @@ terraform-destroy: ## Execute terraform destroy in terraform files
 	echo "STEP: terraform-destroy - Execute terraform destroy in terraform files"
 	docker run --rm -v $(MODULE_DIR):/app -w /app/${TARGET_FOLDER} --env-file $(TARGET_ENV) hashicorp/terraform:$(TERRAFORM_VERSION) destroy -auto-approve
 
+terraform-sh: ## Access the terminal
+	echo "STEP: terraform-sh - Access the terminal"
+	docker run -it --rm -v $(MODULE_DIR):/app -w /app/${TARGET_FOLDER} --env-file $(TARGET_ENV) --entrypoint "" hashicorp/terraform:$(TERRAFORM_VERSION) sh
+
 fmt: terraform-fmt ## alias for terraform fmt
 plan: fmt terraform-init terraform-plan ## Execute terraform fmt, init, plan in terraform files
 apply: terraform-apply ## alias for terraform apply

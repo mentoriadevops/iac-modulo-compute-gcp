@@ -50,3 +50,15 @@ variable "metadata_startup_script" {
   type        = string
   default     = ""
 }
+
+variable "ssh_keys" {
+  description = "Lista de chaves públicas para criar conta local juntamente com acesso SSH"
+  type = string
+  default = ""
+}
+
+variable "network_tier" {
+  description = "Nivel de serviço de rede. Opções: PREMIUM ou STANDARD"
+  type = string
+  default = "STANDARD"
+}
