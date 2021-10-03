@@ -30,6 +30,9 @@ auth-create-iam-policy: ## 2: Cria Policy 1
 	gcloud projects add-iam-policy-binding ${GCP_PROJECT} \
     --member=serviceAccount:${GCP_TERRAFORM_SA}@${GCP_PROJECT}.iam.gserviceaccount.com \
     --role=roles/compute.instanceAdmin.v1
+	gcloud projects add-iam-policy-binding ${GCP_PROJECT} \
+    --member=serviceAccount:${GCP_TERRAFORM_SA}@${GCP_PROJECT}.iam.gserviceaccount.com \
+    --role=roles/compute.networkAdmin
 
 auth-create-add-policy: ## 3: Cria policy 2
 	gcloud projects add-iam-policy-binding ${GCP_PROJECT} \

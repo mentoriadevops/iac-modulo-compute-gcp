@@ -56,3 +56,9 @@ variable "ssh_keys" {
   type = string
   default = ""
 }
+
+variable "network_tier" {
+  description = "Nivel de serviço de rede. Opções: PREMIUM ou STANDARD"
+  type = string
+  default = "STANDARD"
+}

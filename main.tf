@@ -22,5 +22,15 @@ resource "google_compute_instance" "default" {
     network            = var.network
     subnetwork         = var.subnetwork
     subnetwork_project = var.project
+    access_config {
+      nat_ip = google_compute_address.default.address
+      network_tier = var.network_tier
+    }
   }
+}
+
+resource "google_compute_address" "default" {
+  project      = var.project
+  name = "ipv4-address-${var.instance_name}"
+  network_tier = var.network_tier
 }
