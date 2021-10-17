@@ -53,12 +53,18 @@ variable "metadata_startup_script" {
 
 variable "ssh_keys" {
   description = "Lista de chaves públicas para criar conta local juntamente com acesso SSH"
-  type = string
-  default = ""
+  type        = string
+  default     = ""
 }
 
 variable "network_tier" {
   description = "Nivel de serviço de rede. Opções: PREMIUM ou STANDARD"
-  type = string
-  default = "STANDARD"
+  type        = string
+  default     = "STANDARD"
+}
+
+variable "service_account_scopes" {
+  description = "lista de escopos para o service account"
+  type        = list(string)
+  default     = ["https://www.googleapis.com/auth/compute.readonly"]
 }

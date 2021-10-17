@@ -9,6 +9,8 @@ module "compute_gcp" {
 
   metadata_startup_script = "echo 'Hello Mentoria' > /tmp/hello.txt"
 
+  service_account_scopes = ["https://www.googleapis.com/auth/compute.readonly"]
+
   ssh_keys = <<-EOT
                 debian:ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAGNALqk5plP32GSTpho1XuqRz8xxbj+GCp7bFM5mWtgEcDAoLvccqq939IrqcDPemqJkkT2LCkCwcLsQYFjnnfswwF7SVFV9xFpiMTQEiNqmfJZRcsRbf+6MP4TnEB71KPGVCoUWSsGKfWO7CaFirTKtSi13BeQGFupwBtjHh/== debian
                 ubuntu:ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAGNALqk5plP32GSTpho1XuqRz8xxbj+GCp7bFM5mWtgEcDAoLvccqq939IrqcDPemqJkkT2LCkCwcLsQYFjnnfswwF7SVFV9xFpiMTQEiNqmfJZRcsRbf+6MP4TnEB71KPGVCoUWSsGKfWO7CaFirTKtSi13BeQGFupwBtjHh/== ubuntu
