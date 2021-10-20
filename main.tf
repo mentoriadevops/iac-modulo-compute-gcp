@@ -12,6 +12,9 @@ resource "google_compute_instance" "default" {
     ssh-keys = var.ssh_keys
   }
 
+  service_account {
+    scopes = var.service_account_scopes
+  }
   boot_disk {
     initialize_params {
       image = var.instance_image
@@ -23,7 +26,7 @@ resource "google_compute_instance" "default" {
     subnetwork         = var.subnetwork
     subnetwork_project = var.project
     access_config {
-      nat_ip = google_compute_address.default.address
+      nat_ip       = google_compute_address.default.address
       network_tier = var.network_tier
     }
   }
@@ -31,6 +34,6 @@ resource "google_compute_instance" "default" {
 
 resource "google_compute_address" "default" {
   project      = var.project
-  name = "ipv4-address-${var.instance_name}"
+  name         = "ipv4-address-${var.instance_name}"
   network_tier = var.network_tier
 }
