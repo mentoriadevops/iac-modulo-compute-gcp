@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature/add-tfsec-validate
   pull_request:
 
 jobs:
@@ -37,4 +36,4 @@ jobs:
       
       - name: Tfsec Validate
         id: tfsec
-        run: docker run --rm -v $PWD:/app -w /app tfsec/tfsec .
+        run: docker run --rm -v $PWD:/app -w /app tfsec/tfsec:v0.58 .
