@@ -63,8 +63,8 @@ variable "network_tier" {
   default     = "STANDARD"
 }
 
-variable "service_account_scopes" {
-  description = "lista de escopos para o service account"
+variable "roles" {
+  description = "lista de roles para associar a instância"
   type        = list(string)
-  default     = ["https://www.googleapis.com/auth/compute.readonly"]
+  default     = ["roles/compute.viewer"]
 }
