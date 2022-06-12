@@ -15,6 +15,8 @@
 | Nome | Type |
 |------|------|
 | [google_compute_instance.default](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance) | resource |
+| [google_service_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_service_account) | resource |
+| [google_project_iam_binding](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam#google_project_iam_binding) | resource |
 
 ## Entradas
 
@@ -31,6 +33,7 @@
 | labels | Mapa de labels para nossa instância maneira | `map(string)` | n/a | sim |
 | tags | Lista de tags de rede associadas à instância | `list(string)` | n/a | sim |
 | metadata_startup_script | Script executado na inicialização do Sistema Operacional | `string` | "" | não |
+| roles | lista de roles para associar a instância | `list(string)` | `["roles/compute.viewer"]` | não |
 
 ## Saídas
 

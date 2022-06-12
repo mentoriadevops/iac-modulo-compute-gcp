@@ -13,7 +13,8 @@ resource "google_compute_instance" "default" {
   }
 
   service_account {
-    scopes = var.service_account_scopes
+    email  = google_service_account.sa.email
+    scopes = ["cloud-platform"]
   }
   boot_disk {
     initialize_params {
@@ -36,4 +37,20 @@ resource "google_compute_address" "default" {
   project      = var.project
   name         = "ipv4-address-${var.instance_name}"
   network_tier = var.network_tier
+}
+
+resource "google_service_account" "sa" {
+  account_id   = var.instance_name
+  display_name = var.instance_name
+}
+
+resource "google_project_iam_binding" "roles" {
+  for_each = toset(var.roles)
+
+  project = var.project
+  role    = "roles/${trimprefix(each.key, "roles/")}"
+  members = [
+    "serviceAccount:${google_service_account.sa.email}",
+  ]
+
 }
