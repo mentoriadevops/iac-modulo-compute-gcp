@@ -6,6 +6,8 @@ O formato é baseado no [Mantenha um Changelog](https://keepachangelog.com/pt-BR
 e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/spec/v2.0.0.html).
 
 ## [Não publicado]
+### Corrigido
+- Corrigido a associação de IAM roles com a service account [[GH-21](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/21)]
 
 ## [0.2.0] 2021-11-06
 ### Adicionado
@@ -20,5 +22,5 @@ e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/
 - Criando a versão 0.1 do modulo de compute do GCP [[GH-1]](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/1)
 
 [Não publicado]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/compare/0.2.0...HEAD
-[0.2.0]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/releases/tag/0.1.0
-
+[0.2.0]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/releases/tag/0.2.0
+[0.1.0]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/releases/tag/0.1.0
