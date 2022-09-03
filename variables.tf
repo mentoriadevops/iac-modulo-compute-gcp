@@ -36,7 +36,7 @@ variable "subnetwork" {
 }
 
 variable "public_ip" {
-  description = "IP público fixo da máquina. Se for vazio, a máquina não terá IP público, se for 'ephemeral' a máquina terá um IP dinâmico"
+  description = "IP público fixo da máquina. Se for vazio, a máquina não terá IP público, se for 'ephemeral' a máquina terá um IP dinâmico."
   type        = string
   default     = ""
 }
