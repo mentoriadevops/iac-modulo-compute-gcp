@@ -12,6 +12,9 @@ e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/
 
 ## [0.2.1] - 2022-07-22
 
+### Modificado
+- Uso de IAM roles ao invés de service account scope [[GH-20](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/20)]
+
 ### Corrigido
 - Corrigido a associação de IAM roles com a service account [[GH-21](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/21)]
 
