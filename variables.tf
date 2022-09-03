@@ -35,6 +35,12 @@ variable "subnetwork" {
   default     = ""
 }
 
+variable "public_ip" {
+  description = "IP público fixo da máquina. Se for vazio, a máquina não terá IP público, se for 'ephemeral' a máquina terá um IP dinâmico"
+  type        = string
+  default     = ""
+}
+
 variable "labels" {
   description = "Mapa de labels para nossa instância maneira"
   type        = map(string)

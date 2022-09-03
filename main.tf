@@ -26,9 +26,14 @@ resource "google_compute_instance" "default" {
     network            = var.network
     subnetwork         = var.subnetwork
     subnetwork_project = var.project
-    access_config {
-      nat_ip       = google_compute_address.default.address
-      network_tier = var.network_tier
+
+    dynamic "access_config" {
+      for_each = var.public_ip == "" ? [] : [var.public_ip]
+      iterator = ip
+      content {
+        nat_ip       = ip.value == "ephemeral" ? "" : ip.value
+        network_tier = var.network_tier
+      }
     }
   }
 }
