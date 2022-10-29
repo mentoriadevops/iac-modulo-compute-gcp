@@ -29,6 +29,7 @@
 | network | Nome da rede existente na GCP | `string` | n/a | sim |
 | subnetwork | Nome da subrede existente na GCP * foi definido o valor padrão para caso passe a NETWORK com o valor 'default' | `string` | `""` | não |
 | public_ip | IP público fixo da máquina. Se for vazio, a máquina não terá IP público, se for `"ephemeral"` a máquina terá um IP dinâmico. | `string` | `""` | não |
+| private_ip | IP privado fixo da máquina. Se for vazio, a máquina terá um IP dinâmico da subnet. | string | `""` | não | 
 | zone | Zona na Google Cloud | `string` | n/a | sim |
 | ssh_keys | Lista de chaves públicas para criar conta local juntamente com acesso SSH, separadas por quebra de linha | `string` | "" | não |
 | labels | Mapa de labels para nossa instância maneira | `map(string)` | n/a | sim |

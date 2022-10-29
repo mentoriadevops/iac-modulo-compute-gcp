@@ -26,6 +26,7 @@ resource "google_compute_instance" "default" {
     network            = var.network
     subnetwork         = var.subnetwork
     subnetwork_project = var.project
+    network_ip         = var.private_ip
 
     dynamic "access_config" {
       for_each = var.public_ip == "" ? [] : [var.public_ip]
