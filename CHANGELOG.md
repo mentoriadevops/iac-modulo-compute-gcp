@@ -7,6 +7,8 @@ e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/
 
 ## [Não publicado]
 
+## [0.3.0] - 2022-11-25
+
 ### Adicionado
 - Opção para configuração de IP público da instância [[GH-23](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/23)]
 - Opção para configuração de IP privado da instância [[GH-27](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/27)]
@@ -33,7 +35,8 @@ e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/
 - Implementação do script executado na inicialização do SO  [[GH-4](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/4)]
 - Criando a versão 0.1 do modulo de compute do GCP [[GH-1]](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/1)
 
-[Não publicado]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/compare/0.2.1...HEAD
+[Não publicado]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/compare/0.3.0...HEAD
+[0.3.0]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/releases/tag/0.3.0
 [0.2.1]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/releases/tag/0.2.1
 [0.2.0]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/releases/tag/0.2.0
 [0.1.0]: https://github.com/mentoriaiac/iac-modulo-compute-gcp/releases/tag/0.1.0
