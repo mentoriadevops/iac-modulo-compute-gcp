@@ -39,12 +39,6 @@ resource "google_compute_instance" "default" {
   }
 }
 
-resource "google_compute_address" "default" {
-  project      = var.project
-  name         = "ipv4-address-${var.instance_name}"
-  network_tier = var.network_tier
-}
-
 resource "google_service_account" "sa" {
   account_id   = var.instance_name
   display_name = var.instance_name
