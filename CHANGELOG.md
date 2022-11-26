@@ -9,6 +9,7 @@ e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/
 
 ### Adicionado
 - Opção para configuração de IP público da instância [[GH-23](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/23)]
+- Opção para configuração de IP privado da instância [[GH-27](https://github.com/mentoriaiac/iac-modulo-compute-gcp/pull/27)]
 
 ## [0.2.1] - 2022-07-22
 

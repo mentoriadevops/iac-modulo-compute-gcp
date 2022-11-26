@@ -26,6 +26,7 @@ resource "google_compute_instance" "default" {
     network            = var.network
     subnetwork         = var.subnetwork
     subnetwork_project = var.project
+    network_ip         = var.private_ip
 
     dynamic "access_config" {
       for_each = var.public_ip == "" ? [] : [var.public_ip]
@@ -36,12 +37,6 @@ resource "google_compute_instance" "default" {
       }
     }
   }
-}
-
-resource "google_compute_address" "default" {
-  project      = var.project
-  name         = "ipv4-address-${var.instance_name}"
-  network_tier = var.network_tier
 }
 
 resource "google_service_account" "sa" {

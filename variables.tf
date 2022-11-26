@@ -41,6 +41,12 @@ variable "public_ip" {
   default     = ""
 }
 
+variable "private_ip" {
+  description = "IP privado fixo da máquina. Se for vazio, a máquina terá um IP dinâmico da subnet."
+  type        = string
+  default     = ""
+}
+
 variable "labels" {
   description = "Mapa de labels para nossa instância maneira"
   type        = map(string)
